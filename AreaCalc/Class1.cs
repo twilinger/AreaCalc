@@ -35,9 +35,13 @@ namespace AreaCalc
             _sideC = sideC;
             _halfPerimeter = (_sideA + _sideB + _sideC)/2;
         }
+        public double CheckHalfPeremeter()
+        {
+            return _halfPerimeter;
+        }
         public override double CalculateArea()
         {
-            return (Math.Sqrt(_halfPerimeter * (_halfPerimeter - _sideA) * (_halfPerimeter - _sideB) * (_halfPerimeter * _sideC)));
+            return Math.Sqrt(_halfPerimeter * (_halfPerimeter - _sideA) * (_halfPerimeter - _sideB) * (_halfPerimeter - _sideC));
         }
         public bool CheckRectangular()
         {
